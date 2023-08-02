@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.modelo.Local;
-import org.example.modelo.Oferta;
-import org.example.modelo.Reserva;
-import org.example.modelo.Usuario;
+import org.example.modelo.*;
 
 import java.util.Scanner;
 
@@ -14,6 +11,7 @@ public class Main {
         Oferta oferta= new Oferta();
         Local local = new Local();
         Reserva reserva= new Reserva();
+        Afiliado afiliado=new Afiliado();
 
         System.out.print("Señor usuario ingresa tus nombres y apellidos: ");
         usuario.setNombre(teclado.nextLine());
@@ -42,5 +40,7 @@ public class Main {
         reserva.setFechaReserva(teclado.nextLine());
         System.out.print("Cantidad de personas para la reserva: ");
         reserva.setPersonasPorReserva(teclado.nextInt());
+
+
     }
 }

@@ -2,13 +2,14 @@ package org.example.modelo;
 
 import org.example.validacions.UsuarioValidaciones;
 
-public class Usuario {
+public abstract class Usuario {
 
     private Integer id;
     private String documento;
     private String nombre;
     private String correo;
     private Integer ubicacion;
+    private final Integer costoAnual=2000000;
     private UsuarioValidaciones validacion=new UsuarioValidaciones();
 
     public Usuario() {
@@ -74,6 +75,10 @@ public class Usuario {
         return ubicacion;
     }
 
+    public Integer getCostoAnual() {
+        return costoAnual;
+    }
+
     public void setUbicacion(Integer ubicacion) {
         try
         {
@@ -85,4 +90,5 @@ public class Usuario {
             System.out.println(error.getMessage());
         }
     }
+    public abstract Double caluclarAnualidad();
 }
