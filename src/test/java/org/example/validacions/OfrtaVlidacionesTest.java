@@ -22,7 +22,7 @@ class OfrtaVlidacionesTest {
     public void ValidarTitulo()
     {
         String tituloValido= "las-validaciones";
-        Assertions.assertDoesNotThrow(()->ofrtaVlidaciones.validarTitulo("ValidarTitulo"));
+        Assertions.assertDoesNotThrow(()->ofrtaVlidaciones.validarTitulo(tituloValido));
     }
 
     @Test

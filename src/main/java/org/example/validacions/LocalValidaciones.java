@@ -2,7 +2,7 @@ package org.example.validacions;
 
 public class LocalValidaciones {
 
-    public Boolean validarNit(String nit) throws Exception
+    public static Boolean validarNit(String nit) throws Exception
     {
         if (nit.length()==10){
           return true;
